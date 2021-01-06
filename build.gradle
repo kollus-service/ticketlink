@@ -65,10 +65,10 @@ processResources.dependsOn 'buildFrontEnd'
 
 remotes {
     webServer {
-        host = 'hyeond-pc.asuscomm.com'
-        user = 'hyeond'
-        password = 'blind3256@!'
-        port = 2222
+        host = ''
+        user = ''
+        password = ''
+        port = 0
         knownHosts = allowAnyHosts
     }
 }
@@ -83,7 +83,7 @@ task deploy {
         ssh.run {
             session(remotes.webServer) {
                 final jarName = project.jarBaseName + "-" + project.jarVersion + ".jar"
-                put from: "build/libs/${jarName}", into: '/home/hyeond/GoHomeDaddy/ticketlink'
+                put from: "", into: ''
                 execute "ps -ef | grep app- | grep -v grep | awk '{print \"kill -9\",\$2}' | sh -v"
                 execute "nohup java -jar /home/hyeond/GoHomeDaddy/ticketlink/${jarName} < /dev/null > /dev/null  2> /dev/null &"
 //                executeBackground "nohup java -jar /home/hyeond/GoHomeDaddy/ticketlink/${jarName} &"
