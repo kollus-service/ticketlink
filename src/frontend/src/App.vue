@@ -1,8 +1,7 @@
 <template>
   <b-container id="app" fluid>
 
-    <LiveChannelList v-on:selectChannel="selectChannel"/>
-    <Player :channel="channel"></Player>
+
   </b-container>
 </template>
 
