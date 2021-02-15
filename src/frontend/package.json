@@ -16,6 +16,7 @@
     "path": "^0.12.7",
     "request": "^2.88.2",
     "vue": "^2.6.11",
+    "vue-friendly-iframe": "^0.19.0",
     "vue-router": "^3.5.1"
   },
   "devDependencies": {
@@ -39,7 +40,9 @@
     "parserOptions": {
       "parser": "babel-eslint"
     },
-    "rules": {}
+    "rules": {
+      "no-unused-vars": "off"
+    }
   },
   "browserslist": [
     "> 1%",
